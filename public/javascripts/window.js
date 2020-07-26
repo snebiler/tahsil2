@@ -1,19 +1,34 @@
 function win() {
-    var width = Number.parseInt(window.innerWidth);
+
+    var width = document.documentElement.clientWidth;
+
+    // console.log(width);
+    /**
+     * head tag i içine media attribute u ile css import yaparsam kabul etmiyordu ama asagidaki gibi ekleyince duzgun bi import oldu
+     */
     var head = document.getElementsByTagName('HEAD')[0];
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-        link.type = 'text/css';
+    var linkStyle = document.createElement('link');
+    linkStyle.rel = 'stylesheet';
+    linkStyle.type = 'text/css';
+    linkStyle.href = 'stylesheets/style.css'
+    var linkMobile = document.createElement('link');
+    linkMobile.rel = 'stylesheet';
+    linkMobile.type = 'text/css';
+    linkMobile.href = 'stylesheets/mobile.css'
+    linkMobile.media = "screen and (max-width: 768px)"
+    
+    head.appendChild(linkStyle);
+    head.appendChild(linkMobile);
+
     if (width < 768) {
         console.log("768 den kücük");
-        link.href = 'stylesheets/mobile.css';
-        // console.log(link);
-        head.appendChild(link);
+        // head.appendChild(linkMobile);
+        // if (linkStyle) { head.removeChild(linkStyle) }
     } else {
-        link.href = 'stylesheets/style.css';
-        head.appendChild(link);
+        // head.appendChild(linkStyle);
+        // if (linkMobile) { head.removeChild(linkMobile) }
         console.log(width);
     }
-
 }
-
+window.addEventListener("resize", win);
+win()
