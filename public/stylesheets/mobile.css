@@ -1,0 +1,28 @@
+#main-nav .container {
+    grid-template-columns: 1fr;
+    grid-gap: 1.2rem;
+}
+
+#main-nav ul, 
+#main-nav .logo {
+    justify-self: center;
+}
+
+#main-nav ul li a {
+    padding: 0.40rem;
+}
+
+.dashboard-container {
+    grid-template-columns: 1fr;
+    /* align-items: center; */
+}
+#main-nav .nav-container {
+    display: block;
+    /* grid-template-columns: 7fr 4fr; */
+    padding: 1rem;
+    align-items: center;
+}
+body {
+    background-color: aqua;
+
+}
