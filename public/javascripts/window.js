@@ -19,6 +19,9 @@ function win() {
     
     head.appendChild(linkStyle);
     head.appendChild(linkMobile);
+    /**
+     * aşağıdaki logic e de gerek kalmadı. media attribute u düzgün çalışıyor
+     */
 
     if (width < 768) {
         console.log("768 den kücük");
@@ -31,4 +34,4 @@ function win() {
     }
 }
 window.addEventListener("resize", win);
-win()
+win();

@@ -16,5 +16,13 @@ app.get('/login', (req, res) => res.render('login', {
     title: 'Login',
     path: '/login'
 }));
+app.get('/register', (req, res) => res.render('register', {
+    title: 'Register',
+    path: '/register'
+}));
+app.get('/dashboard', (req, res) => res.render('dashboard', {
+    title: 'Dashboard',
+    path: '/dashboard'
+}));
 
 app.listen(PORT, () => console.log('App listenning on port ' + PORT))

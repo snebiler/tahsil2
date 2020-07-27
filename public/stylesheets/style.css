@@ -62,7 +62,7 @@ h6 {
 
 #main-nav .nav-container {
     display: grid;
-    grid-template-columns: 7fr 4fr;
+    grid-template-columns: 6fr 5fr;
     padding: 1rem;
     align-items: center;
 }
@@ -87,11 +87,123 @@ h6 {
 }
 
 #main-nav ul li a:hover {
-    background: var(--light-color);
-    color: var(--dark-color);
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+
 }
 /* NAV END */
 
-@media only screen and (max-width: 768px) {
-   
+/* SHOWCASE START */
+
+#showcase {
+    color: #fff;
+    background: #333;
+    padding: 2rem;
+    position: relative;
+}
+
+#showcase:before {
+    content: '';
+    background: url('../images/showcase.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+#showcase .showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#showcase .showcase-content {
+    z-index: 1;
+}
+#showcase-content p {
+    margin-bottom: 1rem;
+}
+
+/* SHOWCASE END */
+
+/* UTILITY */
+
+
+
+.btn {
+    color: #fff !important;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.6rem 0.8rem;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+}
+
+.btn-light {
+    background: var(--light-color);
+}
+
+
+.btn-secondary {
+    background: var(--secondary-color);
+}
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn:hover {
+    background: var(--primary-color) !important;
+    border: none !important;
+    opacity: 0.85 !important;
+}
+
+.btn:active {
+    background: var(--primary-color) !important;
+    border: none !important;
+    opacity: 0.85 !important;
+}
+.btn:focus {
+    background: var(--primary-color) !important;
+    border: none !important;
+    opacity: 0.85 !important;
+}
+
+.bg-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.bg-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.bg-secondary {
+    background: var(--secondary-color);
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a {
+    color: #fff;
 }
