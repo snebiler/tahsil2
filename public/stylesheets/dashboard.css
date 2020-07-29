@@ -1,0 +1,15 @@
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 2.5fr 8.5fr;
+}
+
+.left-menu {
+    border: 1px solid #000;
+    height: 100vh;
+    
+}
+
+.right-side {
+    border: 1px solid #000;
+    height: 100vh;
+}
