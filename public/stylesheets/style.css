@@ -1,6 +1,7 @@
 
 :root {
     --primary-color: #6E0D25;
+    --primary-active: #5f021e;
     --secondary-color: #D89D6A;
     --light-color: #FEFFFF;
     --dark-color: #0D1B1E;
@@ -185,7 +186,7 @@ h6 {
 }
 
 .bg-primary {
-    background: var(--primary-color);
+    background: var(--primary-color) !important;
     color: #fff;
 }
 

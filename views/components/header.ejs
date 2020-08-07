@@ -1,25 +1,27 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light main-nav">
-    <button type="button" id="sidebarCollapse" class="btn btn-info">
+    <button type="button" id="sidebarCollapse" class="btn btn-primary <%= path !== "/dashboard" ? 'd-none' : '' %> ">
         <i class="fas fa-align-left"></i>
     </button>
     <a class="navbar-brand " href="#"><img class="logo" src="images/logo.png" alt="Tahsilapp"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler btn btn-primary rounded" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-align-right"></i>
     </button>
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto nav-container">
-        <li class="nav-item <%= path === "/" ? 'active' : '' %>  ">
-          <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item <%= path === "/login" ? 'active' : '' %> <%= path === "/dashboard" ? 'd-none' : '' %>">
-          <a class="nav-link" href="login">Login</a>
-        </li>
-        <li class="nav-item <%= path === "/register" ? 'active' : '' %> <%= path === "/dashboard" ? 'd-none' : '' %>">
-          <a class="nav-link" href="register">Register</a>
-        </li>
-        <li class="nav-item <%= path === "/about" ? 'active' : '' %> ">
-          <a class="nav-link" href="about">About</a>
-        </li>
-      </ul>
+        <ul class="navbar-nav ml-auto nav-container">
+            <li class="nav-item <%= path === "/" ? 'active' : '' %>  ">
+                <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item <%= path === "/login" ? 'active' : '' %> <%= path === "/dashboard" ? 'd-none' : '' %>">
+                <a class="nav-link" href="login">Login</a>
+            </li>
+            <li
+                class="nav-item <%= path === "/register" ? 'active' : '' %> <%= path === "/dashboard" ? 'd-none' : '' %>">
+                <a class="nav-link" href="register">Register</a>
+            </li>
+            <li class="nav-item <%= path === "/about" ? 'active' : '' %> ">
+                <a class="nav-link" href="about">About</a>
+            </li>
+        </ul>
     </div>
-  </nav>
+</nav>
