@@ -13,10 +13,60 @@
             <%- include('components/header.ejs') %>
             <div class="main">
                 <div class="info-box left-box">
-                    <h3>Last Active Clients</h3>
+                    <h3 class="text-center">Last Active Clients</h3>
+                    <table class="table table-borderless table-hover" id="clients-table">
+                        <thead class="table-header">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
                 <div class="info-box right-box">
                     <h3>Last Transactions</h3>
+                    <table id="transactions-table" class="table table-borderless table-hover">
+                        <thead class="table-header">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Client</th>
+                                <th scope="col">Subject</th>
+                                <th scope="col">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
@@ -31,5 +81,66 @@
                 $('#sidebar').toggleClass('active');
             });
         });
+    </script>
+    <!-- <script type="text/javascript">
+        $(document).ready(function () {
+            console.log(document.getElementsByTagName('td')[0].innerHTML)
+            var rows = document.getElementsByTagName('td');
+            console.log(rows);
+            for (let i = 0; i < rows.length; i++) {
+                console.log(rows[i].innerHTML)
+
+            }
+
+        })
+
+    </script> -->
+    <!-- <script>
+        function example4() {
+            var table = document.getElementById("clients-table");
+            cells = table.getElementsByTagName('td');
+
+            for (var i = 0, len = cells.length; i < len; i++) {
+                cells[i].onclick = function () {
+                    alert(this.innerHTML);
+
+                }
+            }
+        }
+        function init() { example4(); }
+        window.onload = init;   
+    </script> -->
+
+    <script>
+        function getTableRowClicked() {
+            var tableClients = document.getElementById("clients-table");
+            var tableTransactions = document.getElementById("transactions-table");
+            // console.log(table.rows[1].childNodes[1].innerHTML);
+            // console.log(table.rows.length);
+            if (tableClients) {
+                /* 0. index table header */
+                for (var i = 1; i < tableClients.rows.length; i++) {
+                    tableClients.rows[i].onclick = function () {
+                        tableText(this);
+                    };
+                    tableClients.rows[i].style.cursor = 'pointer'
+                }
+            }
+            if (tableTransactions) {
+                /* 0. index table header */
+                for (var i = 1; i < tableTransactions.rows.length; i++) {
+                    tableTransactions.rows[i].onclick = function () {
+                        tableText(this);
+                    };
+                    tableTransactions.rows[i].style.cursor = 'pointer'
+                }
+            }
+    
+            function tableText(tableRow) {
+                var id = tableRow.childNodes[1].innerHTML;
+                console.log("row id: " + id);
+            }
+        }
+        window.onload = getTableRowClicked;
     </script>
 </body>

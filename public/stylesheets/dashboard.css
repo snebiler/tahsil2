@@ -164,9 +164,6 @@ a.article:hover {
     border: #ccc 1px solid;
     height: 20rem;
     max-width: 650px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.4rem;
   }
 
   .right-box {
@@ -178,6 +175,10 @@ a.article:hover {
       border-top-left-radius: 4rem;
       border-top-right-radius: 4rem;
 
+  }
+
+  .table-header{
+      border-top: 0 !important;
   }
 
   .main .info-box h3 {
