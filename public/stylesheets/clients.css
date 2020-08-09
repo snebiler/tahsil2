@@ -1,0 +1,22 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import "./style.css";
+@import "./dashboard.css";
+
+
+.clients-container {
+    padding: 1rem;
+    background: #fff;
+    height: 70%;
+    max-width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.clients-container .sub-header {
+    display: flex;
+    margin-bottom: 1rem;
+}
+.clients-container .sub-header .btn {
+    padding: 0.2rem 0.4rem;
+    align-self: center;
+    margin-bottom: 0;
+}

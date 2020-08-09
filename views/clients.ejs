@@ -1,5 +1,9 @@
+<!-- base , rootlamazsam css ler çalışmıyor -->
+<base href="/">
 <%- include('components/head.ejs') %>
-<link rel="stylesheet" href="stylesheets/dashboard.css">
+<!-- <link rel="stylesheet" href="stylesheets/dashboard.css"> -->
+<link rel="stylesheet" href="stylesheets/sidebar.css">
+<link rel="stylesheet" href="stylesheets/clients.css">
 </head>
 
 <body>
@@ -10,62 +14,12 @@
         <!-- Page Content  -->
         <div id="content">
             <%- include('components/header.ejs') %>
-            <div class="main">
-                <div class="info-box left-box">
-                    <h3 class="text-center">Last Active Clients</h3>
-                    <table class="table table-borderless table-hover" id="clients-table">
-                        <thead class="table-header">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
+            <div class="clients-container">
+                <div class="sub-header">
+                    <a href="/dashboard/add-clients" class="btn btn-primary">Add Clients</a>
                 </div>
-                <div class="info-box right-box">
-                    <h3>Last Transactions</h3>
-                    <table id="transactions-table" class="table table-borderless table-hover">
-                        <thead class="table-header">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Client</th>
-                                <th scope="col">Subject</th>
-                                <th scope="col">Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
+                <div class="client-list">
+                    Client List
                 </div>
             </div>
 
