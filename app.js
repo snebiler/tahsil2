@@ -24,5 +24,9 @@ app.get('/dashboard', (req, res) => res.render('dashboard', {
     title: 'Dashboard',
     path: '/dashboard'
 }));
+app.get('/dashboard/clients', (req, res) => res.render('clients', {
+    title: 'Clients',
+    path: '/dashboard/clients'
+}));
 
 app.listen(PORT, () => console.log('App listenning on port ' + PORT))
