@@ -28,5 +28,17 @@ app.get('/dashboard/clients', (req, res) => res.render('clients', {
     title: 'Clients',
     path: '/dashboard/clients'
 }));
+app.get('/dashboard/transactions', (req, res) => res.render('transactions', {
+    title: 'Transaction',
+    path: '/dashboard/transactions'
+}));
+app.get('/dashboard/services', (req, res) => res.render('services', {
+    title: 'Services',
+    path: '/dashboard/services'
+}));
+app.get('/dashboard/add-clients', (req, res) => res.render('add-clients', {
+    title: 'Add Clients',
+    path: '/dashboard/add-clients'
+}));
 
 app.listen(PORT, () => console.log('App listenning on port ' + PORT))

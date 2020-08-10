@@ -4,7 +4,7 @@
     </div>
 
     <ul class="list-unstyled components">
-        <button type="button" id="avatar" class="btn btn-primary ml-auto mr-auto <%= path !== "/dashboard" ? 'd-none' : '' %> ">
+        <button type="button" id="avatar" class="btn btn-primary ml-auto mr-auto <%= path.startsWith("/dashboard") ? '' : 'd-none' %> ">
             <i class="fas fa-user-circle fa-5x"></i>
         </button>
         <li class="<%= path === "/dashboard" ? 'active' : '' %>">

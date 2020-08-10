@@ -3,7 +3,7 @@
 <%- include('components/head.ejs') %>
 <link rel="stylesheet" href="stylesheets/dashboard.css">
 <link rel="stylesheet" href="stylesheets/sidebar.css">
-<link rel="stylesheet" href="stylesheets/clients.css">
+<link rel="stylesheet" href="stylesheets/transactions.css">
 </head>
 
 <body>
@@ -14,12 +14,12 @@
         <!-- Page Content  -->
         <div id="content">
             <%- include('components/header.ejs') %>
-            <div class="clients-container">
+            <div class="transactions-container">
                 <div class="sub-header">
-                    <a href="/dashboard/add-clients" class="btn btn-primary">Add Clients</a>
+                    <a href="/dashboard/add-transaction" class="btn btn-primary">Add Transactions</a>
                 </div>
-                <div class="client-list">
-                    Client List
+                <div class="transaction-list">
+                    Transaction List
                 </div>
             </div>
 
