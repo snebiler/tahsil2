@@ -1,5 +1,8 @@
+body {
+    background: #6E0D25;
+}
 
-#main-nav ul, 
+#main-nav ul,
 #main-nav .logo {
     justify-self: center;
 }
@@ -12,6 +15,7 @@
     grid-template-columns: 1fr;
     /* align-items: center; */
 }
+
 #main-nav .nav-container {
     grid-template-columns: 1fr;
     grid-gap: 1.2rem;

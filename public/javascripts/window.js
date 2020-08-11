@@ -23,15 +23,15 @@ function win() {
      * aşağıdaki logic e de gerek kalmadı. media attribute u düzgün çalışıyor
      */
 
-    if (width < 768) {
-        console.log("768 den kücük");
-        // head.appendChild(linkMobile);
-        // if (linkStyle) { head.removeChild(linkStyle) }
-    } else {
-        // head.appendChild(linkStyle);
-        // if (linkMobile) { head.removeChild(linkMobile) }
-        console.log(width);
-    }
+    // if (width < 768) {
+    //     console.log("768 den kücük");
+    //     head.appendChild(linkMobile);
+    //     if (linkStyle) { head.removeChild(linkStyle) }
+    // } else {
+    //     head.appendChild(linkStyle);
+    //     if (linkMobile) { head.removeChild(linkMobile) }
+    //     console.log(width);
+    // }
 }
-window.addEventListener("resize", win);
-win();
+// window.addEventListener("onload", win);
+// win();
