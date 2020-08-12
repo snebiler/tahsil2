@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #6E0D25;
+    --primary-color: rgb(110, 13, 37);
     --primary-active: #5f021e;
     --secondary-color: #D89D6A;
     --light-color: #FEFFFF;
@@ -218,28 +218,29 @@ h6 {
 }
 
 
-@media screen and (max-width: 768px) {
-
+/* @media screen and (min-width: 768px) { */
+/* 
     body {
         background: #6E0D25;
-    }
+    } */
 
-    #main-nav ul,
+    /* #main-nav ul,
     #main-nav .logo {
         justify-self: center;
-    }
+    } */
 
-    #main-nav ul li a {
+    /* #main-nav ul li a {
         padding: 0.40rem;
-    }
+    } */
 
-    .dashboard-container {
+    /* .dashboard-container {
         grid-template-columns: 1fr;
-        /* align-items: center; */
-    }
+       
+    }  */
 
-    #main-nav .nav-container {
+
+    /* #main-nav .nav-container {
         grid-template-columns: 1fr;
         grid-gap: 1.2rem;
-    }
-}
+    } */
+/* } */
