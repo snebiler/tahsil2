@@ -3,7 +3,7 @@
 <%- include('components/head.ejs') %>
 <link rel="stylesheet" href="stylesheets/dashboard.css">
 <link rel="stylesheet" href="stylesheets/sidebar.css">
-<link rel="stylesheet" href="stylesheets/add-clients.css">
+<link rel="stylesheet" href="stylesheets/add-service.css">
 </head>
 
 <body>
@@ -14,20 +14,23 @@
         <!-- Page Content  -->
         <div id="content">
             <%- include('components/header.ejs') %>
-            <div class="add-clients-container">
+            <div class="add-service-container">
                 <div class="sub-header">
-                    <h3>Add Clients</h3>
+                    <h3>Add Service</h3>
                 </div>
-                <div class="add-client-form ">
+                <div class="add-service-form ">
                     <form>
                         <div class="form-group">
-                          <label for="name">Name</label>
-                          <input type="name" class="form-control" id="name" aria-describedby="name">
-                          <small id="name" class="form-text text-muted">We'll never share your information with anyone else.</small>
+                            <label for="name">Name</label>
+                            <input type="name" class="form-control" id="name" aria-describedby="name">
+                          </div>
+                        <div class="form-group">
+                          <label for="number">Amount per Hour</label>
+                          <input type="number" step="0.1" class="form-control" id="number">
                         </div>
                         <div class="form-group">
-                          <label for="email">Email</label>
-                          <input type="email" class="form-control" id="email">
+                          <label for="desc">Description</label>
+                          <textarea type="textarea" rows="4" class="form-control" id="desc"> </textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                       </form>

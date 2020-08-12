@@ -44,5 +44,9 @@ app.get('/dashboard/add-transaction', (req, res) => res.render('add-transaction'
     title: 'Add Transaction',
     path: '/dashboard/add-transaction'
 }));
+app.get('/dashboard/add-service', (req, res) => res.render('add-service', {
+    title: 'Add Service',
+    path: '/dashboard/add-service'
+}));
 
 app.listen(PORT, () => console.log('App listenning on port ' + PORT))
